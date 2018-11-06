@@ -1,0 +1,174 @@
+conky.config={
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+--背景
+background = false,
+--更新间隔
+update_interval = 1,
+--使用Xdbe扩展？（消除闪烁）强烈建议使用自己的窗口，因此双缓冲区不会那么大。
+double_buffer = true,
+--从已用内存中减去（文件系统）缓冲区？
+no_buffers = true,
+--Imlib2图像缓存大小，以字节为单位。默认为4MiB。如果使用$ image批次，请增加此值。设置为0以禁用图像缓存。
+imlib_cache_size = 10,
+--画阴影
+draw_shades = false,
+--画出轮廓
+draw_outline = false,
+--在文字周围画边框
+draw_borders = false,
+--在图表周围绘制边框
+draw_graph_borders = true,
+--指定图形的默认高度。如果未指定，则默认值为25。
+default_graph_height = 16,
+--指定图形的默认宽度。如果未指定，则默认值为0，这会使图形展开以适合Conky窗口的宽度。如果设置out_to_console = true，则图形的文本版本实际上没有宽度，您需要设置合理的默认值或单独设置每个图形的高度和宽度。
+--default_graph_width = 80,
+--显示缩放图形中的最大值。
+show_graph_scale = false,
+--显示图表所涵盖的时间范围。
+show_graph_range = false,
+
+
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+--屏幕右边界或左边界之间的像素间隙，与在命令行传递-x相同，例如gap_x = 10。有关其他位置相关的内容，请参阅“对齐”。
+gap_x = 1200,
+--屏幕顶部或底部边框之间的像素间隙，与在命令行传递-y相同，例如gap_y = 10。有关其他位置相关的内容，请参阅“对齐”。
+gap_y = 120,
+--最小窗口高度
+minimum_height = 730,
+--最小窗口宽度
+minimum_width = 128,
+--最大窗口宽度
+maximum_width = 220,
+--创建自己绘制的窗口
+own_window = true,
+--如果own_window为yes，则可以指定type normal，desktop，dock，panel或override（默认值：normal）。桌面窗户是没有窗户装饰的特殊窗户; 在桌面上始终可见; 不会出现在寻呼机或任务栏中; 并且在所有工作区都很粘。面板窗口沿着桌面边缘保留空间，就像面板和任务栏一样，防止最大化的窗口重叠它们。根据对齐选项选择边缘。覆盖窗口不受窗口管理器的控制。提示被忽略。这种类型的窗口对某些情况很有用。
+own_window_type = "normal",
+--设置透明度？如果启用了ARGB visual，则将背景不透明度设置为0％。
+own_window_transparent = true,
+--如果own_window为yes，您可以使用这些窗口管理器提示来影响Conky显示的方式。注意：使用own_window_type桌面作为隐式实现许多这些提示的另一种方式。如果使用own_window_type覆盖，则窗口管理器提示没有意义并被忽略。
+own_window_hints = "undecorated,below,sticky,skip_taskbar,skip_pager",
+--内边框边距（以像素为单位）（边框与文本之间的边距）。
+--border_inner_margin=0,
+--外边框边距（以像素为单位）（边框与窗口边缘之间的边距）。
+--border_outer_margin=0,
+--屏幕上的对齐位置，可以是top_left，top_right，top_middle，bottom_left，bottom_right，bottom_middle，middle_left，middle_middle，middle_right或none（也可以缩写为tl，tr，tm，bl，br，bm，ml，mm，mr ）。另请参见gap_x和gap_y。
+--alignment="middle_middle",
+--布尔值，使用ARGB visual？ARGB可以用于真正的透明度，请注意，复合管理器是真正透明度所必需的。与“own_window_type override”结合使用时，此选项无法按预期（大多数情况下）工作。
+--own_window_argb_visual=true,
+--启用ARGB视觉效果时，使用此选项可修改使用的Alpha值。有效范围是0-255，其中0是0％不透明度，255是100％不透明度。
+--own_window_argb_value=0,
+
+
+-------------------------------------
+--  Text Settings
+-------------------------------------
+--使用Xft（抗锯齿字体和东西）
+use_xft = true,
+--Xft字体的Alpha。必须是1到0之间的值。
+xftalpha = 1,
+--X中的字体名称，xfontsel可用于获得漂亮的字体
+--font ="Noto Sans Mono CJK SC:size=10",
+font ="Play-Regular:size=10",
+--标准文本缓冲区的大小（默认为256字节）。此缓冲区用于中间文本，例如单个行，$ exec变量的输出以及各种其他变量。增加此缓冲区的大小可以大大降低Conky的性能，但允许每个变量显示更多文本。此缓冲区的大小不能小于默认值256字节。
+text_buffer_size = 2048,
+--强制UTF8？需要XFT
+override_utf8_locale = true,
+
+
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+--预定义颜色以便在conky.text段内使用。用0到9之间的数字代替N，包括在内。以十六进制指定颜色值时，请省略前导散列（＃）。
+	default_color="FFFFFF",
+	color1="0AEFFF", 
+	color2="FF8500", 
+	color3="FF3939", 
+	color4="B6EF13", 
+	color5="ECECEC", 
+	color6="00FF00",
+	--Signal Colours
+	color7="1F7411",  --green
+	color8="FFA726",  --orange
+	color9="F1544B",  --firebrick
+
+
+-------------------------------------
+--  API Key
+-------------------------------------
+template6 = "b86879e1dc40927d7c1d739ae14f91d3",
+
+
+-------------------------------------
+--  City ID
+-------------------------------------
+template7 = "1795565",
+
+
+-------------------------------------
+--  Temp Unit (default, metric, imperial)
+-------------------------------------
+template8="metric",
+
+
+-------------------------------------
+--  Locale (e.g. "es_ES.UTF-8")
+--  Leave empty for default
+-------------------------------------
+template9="zh_cn"
+
+}
+---------------------------------------------------
+---------------------------------------------------
+conky.text = [[
+${font Play-Regular:size=22}${alignc}${color4}${time %H:%M}${font}${color}
+${font Noto Sans CJK SC Light:size=10}${alignc}${color6}${time 星期%a  %Y年%b%d日}${font}${color}
+${execi 300 ~/.config/weather/get_weather ${template6} ${template7} ${template8} ${template9}}\
+${font Play-Blod:size=30}${color}${execi 300 jq -r .main.temp ~/.cache/weather/weather.json | awk '{print int($1+0.5)}' # round num}°C${font}${color}
+${alignr 180}${voffset 10}${font Play-Blod:size=9}${color}${execi 300 jq -r .weather[0].description ~/.cache/weather/weather.json | sed "s|\<.|\U&|g"}${font}${color}
+${color}${alignr}${voffset -60}${execi 300 jq -r .main.pressure ~/.cache/weather/weather.json | awk '{print int($1+0.5)}' # round num} hPa${color} ${font Noto Sans CJK SC:size=9}气压${font}
+${color}${alignr}${voffset 7}${execi 300 jq -r .main.humidity ~/.cache/weather/weather.json | awk '{print int($1+0.5)}' # round num} %${color} ${font Noto Sans Mono CJK SC:size=9}湿度${font}
+${color}${alignr}${voffset 7}${execi 300 jq -r .wind.speed ~/.cache/weather/weather.json | awk '{print int($1+0.5)}' # round num} m/s${color} ${font Noto Sans Mono CJK SC:size=9}风速${font}
+${color6}——${color}${color}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +1day +%^a}${color}${color6}————${color}${color}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +2day +%^a}${color}${color6}————${color}${color}${execi 300 LANG=${template9} LC_TIME=${template9} date -d +3day +%^a}${color}${color6}———${color}
+
+
+${color6} ${color}${color}${execi 300 ~/.config/weather/parse_weather 'avg' '.main.temp_min' '0'}°C/${execi 300 ~/.config/weather/parse_weather 'avg' '.main.temp_max' '0'}°C${color6}--${color}${execi 300 ~/.config/weather/parse_weather 'avg' '.main.temp_min' '1'}°C/${execi 300 ~/.config/weather/parse_weather 'avg' '.main.temp_max' '1'}°C${color}${color6}--${color}${color}${execi 300 ~/.config/weather/parse_weather 'avg' '.main.temp_min' '2'}°C/${execi 300 ~/.config/weather/parse_weather 'avg' '.main.temp_max' '2'}°C${color}${color6}${color}
+${color2}${font Noto Sans CJK SC:size=9}主机信息:${font}${color}${alignr}${color1}$nodename${color}
+${color2}${font Noto Sans CJK SC:size=9}内核信息:${font}${color}${alignr}${color1}$kernel${color}
+${color2}${font Noto Sans CJK SC:size=9}开机时长:${font}${color}${alignr}${color6}$uptime${color}
+${color2}CPU${font Noto Sans CJK SC:size=9}温度:${font}${color}${alignr}${color6}${freq_g} Ghz  ${color}${color3}${acpitemp}°C${color}
+${color2}GPU${font Noto Sans CJK SC:size=9}温度:${font}${color}${alignr}${color6}${nvidia gpufreq} Mhz/${nvidia memfreq} Mhz  ${color}${color3}${nvidia temp}°C${color}
+${color2}CPU${font Noto Sans CJK SC:size=9}核心:${font}${color}${alignr}${color6}${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}%${color}
+${color3}${cpugraph cpu1 22,45 000000 ff4500 }${alignr 28}${cpugraph cpu2 22,45 000000 436eee}${alignr 14}${cpugraph cpu3 22,45 000000 ff4500 }${alignr}${cpugraph cpu4 22,45 000000 436eee}${color}
+${color2}${font Noto Sans CJK SC:size=9}硬盘:${font}${color} ${alignr}${color1}${fs_free /} ${color} / ${color}${fs_size /}${color}
+${color1}${fs_bar 4 /}${color}
+${color2}${font Noto Sans CJK SC:size=9}内存${font} ${color}${alignr}${color1}$mem${color} / ${color}$memmax ${color}${color3}($memperc%)${color}
+${color1}${membar 4}${color}
+${color2}Highest CPU${color}${alignc -50}${color2}CPU%${color}${color2}${alignr}MEM%${color}
+${color6}${top name 1}${color}${alignc -50}${color1}${top cpu 1}${color}${color3}${alignr}${top mem 1}${color}
+${color6}${top name 2}${color}${alignc -50}${color1}${top cpu 2}${color}${color3}${alignr}${top mem 2}${color}
+${color6}${top name 3}${color}${alignc -50}${color1}${top cpu 3}${color}${color3}${alignr}${top mem 3}${color}
+${color2}Highest MEM ${color}${alignc -50}${color2}CPU% ${color}${color2}${alignr}MEM%${color}
+${color6}${top_mem name 1}${color}${alignc -50}${color1}${top_mem cpu 1}${color}${color3}${alignr}${top_mem mem 1}${color}
+${color6}${top_mem name 2}${color}${alignc -50}${color1}${top_mem cpu 2}${color}${color3}${alignr}${top_mem mem 2}${color}
+${color6}${top_mem name 3}${color}${alignc -50}${color1}${top_mem cpu 3}${color}${color3}${alignr}${top_mem mem 3}${color}
+#${color1}${hr 1}${color}
+${color2}${font Noto Sans CJK SC:size=9}外网${font}  IP:${color}${color1}${exec curl -s www.icanhazip.com}${color}${color2}${alignr}${font Noto Sans CJK SC:size=9}连接数:${font}  ${color}${color6}${tcp_portmon 1 65535 count}${color}
+${if_existing /proc/net/route enp3s0}${color2}${font Noto Sans CJK SC:size=9}局域网${font}IP: ${color}${color1}${addr enp3s0}${color}${color}  ${font Noto Sans CJK SC:size=9}有线网络${font}${color}
+${color6}Down ${downspeed enp3s0} k/s ${alignr}Up ${upspeed enp3s0} k/s${color}
+${color3}${downspeedgraph enp3s0 25,107} ${alignr}${upspeedgraph enp3s0 25,107}${color}
+${color6}Total ${totaldown enp3s0} ${alignr}Total ${totalup enp3s0}${color}${else}\
+${color2}${font Noto Sans CJK SC:size=9}局域网${font}IP:${color}${color1}${addr wlp5s0}${color}${alignr}${color}${font Noto Sans CJK SC:size=9}无线网络${font}${color}
+${color6}Down ${downspeed wlp5s0} k/s ${alignr}Up ${upspeed wlp5s0} k/s${color}
+${color6}${downspeedgraph wlp5s0 25,107} ${alignr}${upspeedgraph wlp5s0 25,107}${color}
+${color6}Total ${totaldown wlp5s0} ${alignr}Total ${totalup wlp5s0}${color}
+${else}
+${color}Network disconnected${else}${endif}${endif}
+${execi 300 cp -f ~/.config/weather/icons/#fff__64/$(~/.config/weather/parse_weather 'first' '.weather[0].id' '0').png ~/.cache/weather/weather-1.png}${image ~/.cache/weather/weather-1.png -p 85,65 -s 64x64}\
+${execi 300 cp -f ~/.config/weather/icons/#fff__32/$(~/.config/weather/parse_weather 'first' '.weather[0].id' '1').png ~/.cache/weather/weather-1.png}${image ~/.cache/weather/weather-1.png -p 18,140 -s 32x32}\
+${execi 300 cp -f ~/.config/weather/icons/#fff__32/$(~/.config/weather/parse_weather 'first' '.weather[0].id' '2').png ~/.cache/weather/weather-2.png}${image ~/.cache/weather/weather-2.png -p 90,140 -s 32x32}\
+${execi 300 cp -f ~/.config/weather/icons/#fff__32/$(~/.config/weather/parse_weather 'first' '.weather[0].id' '3').png ~/.cache/weather/weather-3.png}${image ~/.cache/weather/weather-3.png -p 162,140 -s 32x32}${font}${voffset -120}\
+]]
